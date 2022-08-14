@@ -9,7 +9,7 @@ import os, json, imp
 
 here = os.path.abspath(os.path.dirname(__file__))
 proj_info = json.loads(open(os.path.join(here, PROJ_METADATA)).read())
-README = open(os.path.join(here, 'README.rst')).read()
+README = open(os.path.join(here, 'README.rst'), encoding="utf-8").read()
 CHANGELOG = open(os.path.join(here, 'CHANGELOG.rst')).read()
 VERSION = imp.load_source('version', os.path.join(here, 'src/%s/version.py' % PACKAGE_NAME)).__version__
 
